@@ -1,0 +1,18 @@
+<?php $page = $this->page; ?>
+<?php $parent = $this->parent; ?>
+<?php $this->headTitle()->prepend('Homepage')?>
+<?php $this->headMeta()->setName('description', $this->settings('metadescription')); ?>
+
+<?php $this->headLink()->prependStylesheet($this->basePath() . '/css/homepage.css', "all"); ?>
+
+
+<?php echo $this->blocks($page, 'startbody'); ?>
+
+<?php echo $this->blocks($page, 'beforecontent'); ?>
+<?php echo $this->blocks($page, 'contentstart'); ?>
+<?php echo $page->getContent() ?>
+<?php echo $this->blocks($page, 'contentend'); ?>
+
+<?php echo $this->blocks($page, 'aftercontent'); ?>
+
+<?php echo $this->blocks($page, 'endbody'); ?>
