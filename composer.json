@@ -1,5 +1,5 @@
 {
-  "name": "shineisp/shineisp-cms",
+  "name": "shinesoftware-zf-modules/cms",
   "description": "Cms module for ShineISP project",
   "license": "BSD-2-Clause",
   "type": "library",
@@ -8,7 +8,7 @@
     "zf2",
     "shineisp"
   ],
-  "homepage": "http://github.com/shineisp/Profile",
+  "homepage": "http://github.com/shinesoftware-zf-modules/Profile",
   "authors": [
     {
       "name": "Michelangelo Turillo",
