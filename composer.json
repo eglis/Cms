@@ -1,19 +1,19 @@
 {
   "name": "shinesoftware-zf-modules/cms",
-  "description": "Cms module for ShineISP project",
+  "description": "CMS module written for the Zend Framework projects",
   "license": "BSD-2-Clause",
   "type": "library",
   "minimum-stability": "dev",
   "keywords": [
     "zf2",
-    "shineisp"
+    "CMS Content Management System"
   ],
   "homepage": "http://github.com/shinesoftware-zf-modules/Profile",
   "authors": [
     {
       "name": "Michelangelo Turillo",
-      "email": "info@shineisp.com",
-      "homepage": "http://shineisp.com"
+      "email": "info@shinesoftware.com",
+      "homepage": "http://shinesoftware.com"
     }
   ],
   "require": {
