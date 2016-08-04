@@ -39,10 +39,10 @@ return array(
     ),
     'navigation' => array(
         'default' => array(
-				'cms' => array(
-    				'label' => _('News'),
-					'route' => 'cms',
-				),
+// 						'cms' => array(
+// 								'label' => _('News'),
+// 								'route' => 'cms',
+// 						),
         ),
 
         'admin' => array(
@@ -59,9 +59,9 @@ return array(
             ),
             'cmspages' => array(
                 'label' => _('CMS'),
+                'resource' => 'menu',
                 'route' => 'zfcadmin/cmspages',
                 'privilege' => 'list',
-                'resource' => 'adminmenu',
                 'icon' => 'fa fa-file-text-o',
                 'pages' => array(
                     array(

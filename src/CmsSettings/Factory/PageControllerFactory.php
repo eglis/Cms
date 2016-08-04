@@ -18,9 +18,7 @@ class PageControllerFactory implements FactoryInterface
     {
         $realServiceLocator = $serviceLocator->getServiceLocator();
         $service = $realServiceLocator->get('SettingsService');
-        $translator = $realServiceLocator->get('translator');
-        $form = $realServiceLocator->get('FormElementManager')->get('CmsSettings\Form\PageForm');
 
-        return new PageController($service, $form, $translator);
+        return new PageController($service);
     }
 }
