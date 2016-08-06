@@ -38,13 +38,15 @@ return array(
         ),
     ),
     'navigation' => array(
-        'default' => array(
-// 						'cms' => array(
-// 								'label' => _('News'),
-// 								'route' => 'cms',
-// 						),
+        'default' => array (
+            array (
+                'label' => 'News',
+                'uri' => 'cms',
+                'resource' => 'menu',
+                'privilege' => 'list',
+                'order' => 10,
+            ),
         ),
-
         'admin' => array(
             'settings' => array(
                 'label' => _('Settings'),
