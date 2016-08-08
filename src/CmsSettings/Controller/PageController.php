@@ -15,29 +15,20 @@ use Zend\View\Model\ViewModel;
 class PageController extends AbstractActionController
 {
 	protected $recordService;
-	protected $translator;
-	
-	/**
-	 * preDispatch of the page
-	 *
-	 * (non-PHPdoc)
-	 * @see Zend\Mvc\Controller.AbstractActionController::onDispatch()
-	 */
-	public function onDispatch(\Zend\Mvc\MvcEvent $e){
-	    $this->translator = $e->getApplication()->getServiceManager()->get('translator');
-	    return parent::onDispatch( $e );
-	}
-	
-	public function __construct(\Base\Service\SettingsServiceInterface $recordService)
+    protected $pageform;
+    protected $translator;
+
+	public function __construct(\Base\Service\SettingsServiceInterface $recordService, \CmsSettings\Form\PageForm $pageform, $translator)
 	{
-		$this->recordService = $recordService;
+        $this->recordService = $recordService;
+        $this->pageform = $pageform;
+        $this->translator = $translator;
 	}
 	
     public function indexAction ()
     {
     	$formData = array();
-		$form = $this->getServiceLocator()->get('FormElementManager')->get('CmsSettings\Form\PageForm');
-    
+
 		// Get the custom settings of this module: "Cms"
 		$records = $this->recordService->findByModule('Cms');
 		
@@ -48,10 +39,10 @@ class PageController extends AbstractActionController
 		}
 		
 		// Fill the form with the data
-		$form->setData($formData);
+		$this->pageform->setData($formData);
 		
     	$viewModel = new ViewModel(array (
-    			'form' => $form,
+    			'form' => $this->pageform,
     	));
     
     	$viewModel->setTemplate('cms-settings/page/index');
@@ -69,21 +60,20 @@ class PageController extends AbstractActionController
 	    	$settingsEntity = new \Base\Entity\Settings();
 	    	
 	    	$post = $this->request->getPost();
-	    	$form = $this->getServiceLocator()->get('FormElementManager')->get('CmsSettings\Form\PageForm');
-	    	$form->setData($post);
+            $this->pageform->setData($post);
 	    	
-	    	if (!$form->isValid()) {
+	    	if (!$this->pageform->isValid()) {
 	    	
 	    		// Get the record by its id
 	    		$viewModel = new ViewModel(array (
 	    				'error' => true,
-	    				'form' => $form,
+	    				'form' => $this->pageform,
 	    		));
 	    		$viewModel->setTemplate('cms-settings/page/index');
 	    		return $viewModel;
 	    	}
 	    	
-	    	$data = $form->getData();
+	    	$data = $this->pageform->getData();
 	    	
 	    	// Cleanup the custom settings
 	   		$this->recordService->cleanup('Cms');
