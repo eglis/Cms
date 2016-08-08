@@ -7,7 +7,6 @@ You will need:
 * [Composer](https://getcomposer.org/)
 * [Base Module](https://github.com/shinesoftware-zf-modules/Base)
 * [Admin Module](https://github.com/shinesoftware-zf-modules/Admin)
-* [Main Module](https://github.com/shinesoftware-zf-modules/Main)
 
 ## Apache Configuration
 
