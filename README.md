@@ -3,10 +3,11 @@ A simple Cms module for handle the content of the pages of the website.
 
 ## Prerequisites
 You will need:
-* [Git](http://git-scm.com/)
-* [Composer](https://getcomposer.org/)
-* [Base Module](https://github.com/shinesoftware-zf-modules/Base)
-* [Admin Module](https://github.com/shinesoftware-zf-modules/Admin)
+
+- [Git](http://git-scm.com/)
+- [Composer](https://getcomposer.org/)
+- [Base Module](https://shinedev@bitbucket.org/shinesoftware/base.git)
+- [Admin Module](https://shinedev@bitbucket.org/shinesoftware/admin.git)
 
 ## Apache Configuration
 
@@ -52,7 +53,7 @@ To get the application running, perform the following steps:
     [
         {
             "type": "vcs",
-            "url": "https://github.com/shinesoftware-zf-modules/Cms"
+            "url": "https://shinedev@bitbucket.org/shinesoftware/cms.git"
         }
     ],
 ```
