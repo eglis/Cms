@@ -1,5 +1,5 @@
 {
-  "name": "shinesoftware-zf-modules/cms",
+  "name": "shinesoftware/cms",
   "description": "CMS module written for the Zend Framework projects",
   "license": "BSD-2-Clause",
   "type": "library",
@@ -8,7 +8,7 @@
     "zf2",
     "CMS Content Management System"
   ],
-  "homepage": "http://github.com/shinesoftware-zf-modules/Profile",
+  "homepage": "https://shinedev@bitbucket.org/shinesoftware/cms.git",
   "authors": [
     {
       "name": "Michelangelo Turillo",
