@@ -44,7 +44,7 @@ return array(
                 'uri' => 'cms',
                 'resource' => 'menu',
                 'privilege' => 'list',
-                'order' => 10,
+                'order' => 1,
             ),
         ),
         'admin' => array(
