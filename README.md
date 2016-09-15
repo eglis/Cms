@@ -53,7 +53,7 @@ To get the application running, perform the following steps:
     [
         {
             "type": "vcs",
-            "url": "https://shinedev@bitbucket.org/shinesoftware/cms.git"
+            "url": "https://github.com/shineisp/Cms.git"
         }
     ],
 ```
